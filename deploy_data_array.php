@@ -24,3 +24,6 @@ $repo_array = array(
 ksort($repo_array);
 
 
+// git clone git@github.com:jack-freiermuth/RadiantBlades.git 
+
+// http://jackfry.net/git_scripts/deployment_repository.php

@@ -21,7 +21,6 @@ error_reporting(-1);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<div id="header-area">
-		<?php include 'login-global-header.php';?>
 	</div>
 	<div id="sub_header_bg">
 		<div id="sub_header_wrap">
