@@ -43,8 +43,7 @@ function pullToStaging( $repo_array, $git_repository, $pretty_repository, $deplo
 		die( 'Invalid Deployment Path. Does not contain valid base path.');
 	} else {
 		if( $validation['is_valid'] ){
-			echo '<br> rm -rf '.$deploy_path.'/.*;';
-			echo '<br> rm -rf '.$deploy_path.'/**;';
+			echo '<br> rm -Rf '.$deploy_path.'/;';
 			echo '<br> git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;';
 			echo '<br> chmod -R 775 '.$deploy_path.';';
 			echo '<br> chgrp -R www-data '.$deploy_path.';';
@@ -54,7 +53,7 @@ function pullToStaging( $repo_array, $git_repository, $pretty_repository, $deplo
 			shell_exec( 'rm -rf '.$deploy_path.'/**;');
 			shell_exec( 'git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;');
 			shell_exec( 'chmod -R 775 '.$deploy_path.';');
-			shell_exec( 'chown -R apache:www-data '.$deploy_path.';');
+			shell_exec( 'chown -R root:apache '.$deploy_path.';');
 
 			echo '<br><br>Deployment Complete!';
 
