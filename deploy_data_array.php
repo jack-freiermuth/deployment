@@ -1,7 +1,7 @@
 
 <?php
 include 'security.php';
-$root_path_jackfry = 'root@107.170.53.142:/var/www/html/';
+$root_path_jackfry = '/var/www/html/';
 
 $repo_array = array(
 	'RadiantBlades' => array(
