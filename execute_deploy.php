@@ -46,14 +46,20 @@ function pullToStaging( $repo_array, $git_repository, $pretty_repository, $deplo
 			echo '<br> rm -Rf '.$deploy_path.'/;';
 			echo '<br> git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;';
 			echo '<br> chmod -R 775 '.$deploy_path.';';
-			echo '<br> chgrp -R www-data '.$deploy_path.';';
+			echo '<br> chown -R root:apache '.$deploy_path.';';
 
+			$shell_output = array(
+				'Apache Permission' =>shell_exec( 'sudo chown -R _currentuser_:apache /var/www/html && chmod -R g+sw /var/www/html'),
+				'Remove Folder' =>shell_exec( 'rm -Rf '.$deploy_path.'/;'),
+				'Clone' =>shell_exec( 'git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;'),
+				'Change Permission' =>shell_exec( 'chmod -R 775 '.$deploy_path.';'),
+				'Change Ownership' =>shell_exec( 'chown -R root:apache '.$deploy_path.';'),
+			);
 
-			shell_exec( 'rm -rf '.$deploy_path.'/.*;');
-			shell_exec( 'rm -rf '.$deploy_path.'/**;');
-			shell_exec( 'git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;');
-			shell_exec( 'chmod -R 775 '.$deploy_path.';');
-			shell_exec( 'chown -R root:apache '.$deploy_path.';');
+			echo '<pre>';
+			echo '<br>Shell Output: ';print_r($shell_output);
+			echo '<br>Shell Output: ';print_r($shell_output['Clone']);
+			echo '</pre>';
 
 			echo '<br><br>Deployment Complete!';
 
