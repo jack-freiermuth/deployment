@@ -278,6 +278,7 @@ body {
 	}
 	.section-wrapper {
 		display: inline-block;
+		width: 100%;
 	}
 	.section-wrapper:after {
 		visibility: hidden;

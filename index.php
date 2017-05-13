@@ -61,29 +61,6 @@ error_reporting(-1);
 	<div class="section-wrapper">
 
 		<!-- ////////////////////////////////////////////////////////////////////////// -->
-		<!--                                Production                                  -->
-		<!-- ////////////////////////////////////////////////////////////////////////// -->
-			<!-- <div id="production" class="section-wrap">
-				<ul class="list">
-					<?php foreach ($repo_array as $repo_name => $server) :
-					if ( '' !== $server['production']) : 
-						if ( isset($server['production']['additional_deploy_paths'])) {
-							$additional_deploy_paths = json_encode($server['production']['additional_deploy_paths']);
-						} else {
-							$additional_deploy_paths = '""';
-						}
-						$is_auto = 'auto' == $server['production'] ?  true : false ?>
-							<li class="list-item">
-									<span class="list-title"><?php echo $repo_name; if ($is_auto) echo ' (Auto)';?></span>
-									<span class="list-details"><span class="author-name">FirstName LastName</span><span class="author-date">Mon Mar 17 21:52:11 2016</span></span>
-									<button onclick='return are_you_sure( "production" ,"<?php echo $repo_name; ?>", "<?php echo $server["repo_name"]; ?>", "<?php echo $server["production"]["path"]; ?>", "<?php echo $server["production"]["sync_from_path"]; ?>", <?php echo $additional_deploy_paths; ?> );' <?php echo $is_auto ? 'disabled' : 'type="submit"'; ?> name="submit" class="prod_button  <?php echo $is_auto ? 'auto_deploy_button btn btn-secondary': 'btn btn-primary'; ?>">Push</button>
-							</li>
-					<?php endif;
-					endforeach; ?>
-				</ul>
-			</div> -->
-
-		<!-- ////////////////////////////////////////////////////////////////////////// -->
 		<!--                                Staging                                     -->
 		<!-- ////////////////////////////////////////////////////////////////////////// -->
 			<div id="staging" class="section-wrap active">
@@ -93,7 +70,7 @@ error_reporting(-1);
 								$is_auto = false;
 							if ( 'auto' == $server['staging'] ) $is_auto = true; ?>
 							<li class="list-item">
-									<span class="list-title"><?php echo $repo_name; if ($is_auto) echo ' (Auto)';?></span>
+									<span class="list-title"><?php echo $repo_name; if ($is_auto) echo '&nbsp(Auto)';?></span>
 									<span class="list-details"><span class="author-name">FirstName LastName</span><span class="author-date">Mon Mar 17 21:52:11 2016</span></span>
 									<button onclick="return are_you_sure( 'staging' ,'<?php echo $repo_name; ?>', '<?php echo $server['repo_name']; ?>', '<?php echo $server['staging']; ?>', '', '' );" <?php echo $is_auto ? 'disabled' : 'type="submit"'; ?> name="submit" class="<?php echo $is_auto ? 'auto_deploy_button btn btn-secondary': 'btn btn-primary'; ?>">Push</button>
 							</li>
