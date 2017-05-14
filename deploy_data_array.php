@@ -19,6 +19,11 @@ $repo_array = array(
 		'staging' => 'auto',
 		'repo_name' => 'deployment',
 		),
+	"Jack's Portfolio" => array(
+		'production' => '',
+		'staging' => $root_path_jackfry.'group_invite',
+		'repo_name' => 'Portfolio',
+		),
 	);
 
 ksort($repo_array);
