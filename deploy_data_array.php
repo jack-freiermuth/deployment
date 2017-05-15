@@ -16,7 +16,7 @@ $repo_array = array(
 		),
 	"Portfolio" => array(
 		'production' => '',
-		'staging' => $root_path_jackfry.'group_invite',
+		'staging' => $root_path_jackfry.'portfolio',
 		'repo_name' => 'portfolio',
 		), 
 	'Deployment' => array(
