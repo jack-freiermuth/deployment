@@ -70,9 +70,12 @@ error_reporting(-1);
 								$is_auto = false;
 							if ( 'auto' == $server['staging'] ) $is_auto = true; ?>
 							<li class="list-item">
-									<span class="list-title"><?php echo $repo_name; if ($is_auto) echo '&nbsp(Auto)';?></span>
-									<span class="list-details"><span class="author-name">FirstName LastName</span><span class="author-date">Mon Mar 17 21:52:11 2016</span></span>
-									<button onclick="return are_you_sure( 'staging' ,'<?php echo $repo_name; ?>', '<?php echo $server['repo_name']; ?>', '<?php echo $server['staging']; ?>', '', '' );" <?php echo $is_auto ? 'disabled' : 'type="submit"'; ?> name="submit" class="<?php echo $is_auto ? 'auto_deploy_button btn btn-secondary': 'btn btn-primary'; ?>">Push</button>
+								<span class="list-title"><?php echo $repo_name; if ($is_auto) echo '&nbsp(Auto)';?></span>
+								<span class="list-details">
+									<span class="author-name">FirstName LastName</span>
+									<span class="author-date">Mon Mar 17 21:52:11 2016</span>
+								</span>
+								<button onclick="return are_you_sure( 'staging' ,'<?php echo $repo_name; ?>', '<?php echo $server['repo_name']; ?>', '<?php echo $server['staging']; ?>', '', '' );" <?php echo $is_auto ? 'disabled' : 'type="submit"'; ?> name="submit" class="<?php echo $is_auto ? 'auto_deploy_button btn btn-secondary': 'btn btn-primary'; ?>">Push</button>
 							</li>
 						<?php endif;
 					endforeach; ?>

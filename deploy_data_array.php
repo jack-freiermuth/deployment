@@ -14,15 +14,15 @@ $repo_array = array(
 		'staging' => $root_path_jackfry.'group_invite',
 		'repo_name' => 'group_invite',
 		),
+	"Portfolio" => array(
+		'production' => '',
+		'staging' => $root_path_jackfry.'group_invite',
+		'repo_name' => 'portfolio',
+		), 
 	'Deployment' => array(
 		'production' => '',
 		'staging' => 'auto',
 		'repo_name' => 'deployment',
-		),
-	"Jack's Portfolio" => array(
-		'production' => '',
-		'staging' => $root_path_jackfry.'group_invite',
-		'repo_name' => 'Portfolio',
 		),
 	);
 
