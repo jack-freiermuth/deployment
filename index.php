@@ -54,7 +54,7 @@ error_reporting(-1);
 	<div class="wrapper">
 		<ul class="nav">
 			<!-- <li class="nav-item" data-id="production">Production</li> -->
-			<li class="nav-item active" data-id="staging">JackFry.net</li>
+			<li class="nav-item active" data-id="staging">ajacks.org</li>
 		</ul>
 	</div>
 
