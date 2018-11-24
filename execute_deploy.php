@@ -44,7 +44,7 @@ function pullToStaging( $repo_array, $git_repository, $pretty_repository, $deplo
 	} else {
 		if( $validation['is_valid'] ){
 			echo '<br> rm -Rf '.$deploy_path.'/;';
-			echo '<br> sudo su git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;';
+			echo '<br> git clone git@github.com:jack-freiermuth/'.$git_repository.'.git '.$deploy_path.'/;';
 			echo '<br> chmod -R 775 '.$deploy_path.';';
 			echo '<br> chown -R root:apache '.$deploy_path.';';
 
