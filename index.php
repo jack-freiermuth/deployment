@@ -1,5 +1,5 @@
 <?php
-include 'security.php';
+include 'security.php'; 
 include 'deploy_data_array.php';
 $root_path_jackfry = 'root@107.170.53.142:/var/www/html/';
 ini_set('display_startup_errors',1);
@@ -27,7 +27,7 @@ error_reporting(-1);
 			<div id="sub_header">
 				<div id="application_title_table">
 					<div id="application_title">
-						<h2><span class="label label-warning">!</span>Deploymen - This deployment page is in a repository itself, so please commit any changes you make.</h2>
+						<h2><span class="label label-warning">!</span>Deployment - This deployment page is in a repository itself, so please commit any changes you make.</h2>
 					</div>
 				</div>
 			</div>
